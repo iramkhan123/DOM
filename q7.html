@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    p{
+
+        font: 25px Arial, sans-serif;
+        text-align: center;
+
+       }
+       #pass{
+        background-color: #3CBC8D;
+        color:white;
+        box-sizing: border-box;
+        padding: 10px;
+        border: 5px solid ;
+        width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+       }
+</style>
+</head>
+<body>
+  <input type="text" id="pass">
+
+</input>
+<p>
+    
+        Capslock is ON !
+    
+</p>
+<script>
+    let select=document.querySelector("#pass");
+    let para=document.querySelector("p")
+    let isShift=false;
+    select.addEventListener("keypress",function(event){
+      if(event.getModifierState("CapsLock")){
+          para.style.display="block";
+          event.preventDefault();
+      }
+      else{
+          para.style.display="none";
+      }
+       
+    })
+    document.addEventListener("keydown",function(e){
+        if(e.key=="Shift"){
+            isShift=true;
+        }
+    })
+    document.addEventListener("keyup",function(e){
+        if(e.key=="Shift"){
+            isShift=false;
+        }
+    })
+
+   
+</script>
+</body>
+</html>
