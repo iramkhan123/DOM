@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+        }
+        p{
+            font-size: 25px;
+            color:darkslateblue;
+        }
+    </style>
+</head>
+<body>
+    <button id="all">
+        REMOVE ALL
+    </button>
+    <ul>
+    <li>
+        <p>Task 1</p>
+        <button> DELETE </button>
+    </li>
+    <li>
+        <p>Task 2</p>
+        <button> DELETE </button>
+    </li>
+    <li>
+        <p>Task 3</p>
+        <button> DELETE </button>
+    </li>
+    <li>
+        <p>Task 4</p>
+        <button> DELETE </button>
+    </li>
+    <li>
+        <p>Task 5</p>
+        <button> DELETE </button>
+    </li>
+    </ul>
+    <script>
+        let btn1=document.querySelector("#all");
+        let select1=document.querySelector("ul");
+        btn1.addEventListener("click",function(){
+            select1.remove();
+        })
+        let select2=document.querySelectorAll("li");
+        for(let i=0;i<select2.length;i++){
+            let btn=select2[i].lastElementChild;
+            btn.addEventListener("click",function(){
+                select2[i].remove();
+            })
+        }
+    </script>
+</body>
+</html>

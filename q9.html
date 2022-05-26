@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .pink{
+            background-color: rgba(255, 99, 71, 0.5);
+            height:20rem;
+            width:20rem;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            margin-right: 10rem;
+            margin-left: 5rem;
+            
+            padding:6rem;
+        }
+        .green{
+            background-color: rgb(60, 179, 113);
+            height:10rem;
+            width:10rem;
+            margin:auto;
+            margin-top: 0.5rem
+         
+        }
+    </style>
+</head>
+<body>
+    <div class="pink">
+        <div class="green">
+
+        </div>
+    </div>
+    <script>
+        let outer=document.querySelector(".pink");
+        outer.addEventListener("click",function(e){
+            if(e.target==e.currentTarget)
+            alert("this is pink box")
+            else
+            alert("this is green boxx")
+        })
+    </script>
+</body>
+</html>
